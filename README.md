@@ -36,7 +36,9 @@ and ensure that no smart package you use mentions jquery in it's `smart.json`.
 
 #### In your app
 
+```
 meteor add jquery
+```
 
 #### In your smart package
 
@@ -46,13 +48,16 @@ api.use('jquery', 'client');
 ```
 
 **smart.json**:
+
 nothing!
 
 ### jQuery 2.x (this package)
 
 #### In your app
 
+```
 mrt add jquery2
+```
 
 #### In your smart package
 
@@ -67,7 +72,7 @@ api.use('jquery2', 'client');
 	...
 	"packages": {
 		...
-		'jquery2': '2.1.0-1'
+		"jquery2": "2.1.0-1"
 	}
 }
 ```
