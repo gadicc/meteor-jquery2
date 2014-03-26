@@ -18,6 +18,15 @@ project.  Your app or smart package should require either `jquery` (the real
 one included inside of Meteor, v1) or `jquery2` (this one), and will be
 provided a `jQuery` and `$` object of the requested version.
 
+Take heed of the following message from jQuery (retrieved 2014-03-26):
+
+> jQuery 2.x has the same API as jQuery 1.x, but (does not support Internet
+Explorer 6, 7, or 8*. All the notes in the
+[jQuery 1.9 Upgrade Guide](http://jquery.com/upgrade-guide/1.9/) apply here as well.
+Since IE 6/7/8 are still relatively common, **we recommend using the 1.x version 
+unless you are certain no IE 6/7/8 users are visiting the site**. Please read the
+[2.0 release notes](http://blog.jquery.com/2013/04/18/jquery-2-0-released/) carefully.
+
 ## Previous install of jquery atmosphere package
 
 You'll need to repair your current installation if your app or a smart package
