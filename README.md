@@ -2,8 +2,8 @@
 
 This package includes jQuery 2.x, packaged for Meteor.
 
-It takes a different approach to the "[jquery](https://atmospherejs.com/package/jquery)
-smart package" (this one is called "jquery2"), which overrides the jQuery package
+It takes a different approach to the "[jquery](https://atmospherejs.com/package/jquery)"
+smart package (this one is called "jquery2"), which overrides the jQuery package
 included with Meteor.  This is quite dangerous, as it will break anything correctly
 expecting jQuery 1.x, notably, Meteor itself (especially Blaze), e.g.
 
