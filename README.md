@@ -1,9 +1,12 @@
 ## jQuery 2.x for Meteor
 
 This package includes jQuery 2.x, packaged for Meteor, and written
-specifically to co-exist with jQuery1 (which is required by Meteor).
+specifically to co-exist with jQuery1 (which is required by Meteor).  You
+should only use this package if you're absolutely sure you need jQuery 2.
+jQuery 1 is still sent down to the client too.  And your jQuery2 code won't
+work on IE 6-8.
 
-It takes a different approach to the "[jquery](https://atmospherejs.com/package/jquery)"
+I took a different approach to the "[jquery](https://atmospherejs.com/package/jquery)"
 smart package (this one is called "jquery2"), which overrides the jQuery package
 included with Meteor.  This is quite dangerous, as it will break anything correctly
 expecting jQuery 1.x, notably, Meteor itself (especially Blaze), e.g.
