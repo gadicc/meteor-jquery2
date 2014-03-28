@@ -91,7 +91,7 @@ api.use('jquery2', 'client');
 
 As you'll see below, you now have access to `jQuery2` and `$2` in your code.
 You can also wrap existing code so that it can still refer to `jQuery` and `$`
-but get the jquery2 versions.
+but gets the jquery2 versions.
 
 ```js
 	console.log('I want jQuery 1.x and got jQuery ' + $.fn.jquery);
