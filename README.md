@@ -1,8 +1,7 @@
-## Apologies, I really didn't think this through.  Don't use this package.  #eternalshame
-
 ## jQuery 2.x for Meteor
 
-This package includes jQuery 2.x, packaged for Meteor.
+This package includes jQuery 2.x, packaged for Meteor, and written
+specifically to co-exist with jQuery1 (which is required by Meteor).
 
 It takes a different approach to the "[jquery](https://atmospherejs.com/package/jquery)"
 smart package (this one is called "jquery2"), which overrides the jQuery package
@@ -17,8 +16,8 @@ expecting jQuery 1.x, notably, Meteor itself (especially Blaze), e.g.
 
 This package allows jQuery2 to co-exist side-by-side with jQuery1 in a Meteor
 project.  Your app or smart package should require either `jquery` (the real
-one included inside of Meteor, v1) or `jquery2` (this one), and will be
-provided a `jQuery` and `$` object of the requested version.
+one included inside of Meteor, v1) or `jquery2` (this one), although your code
+needs to refer to jQuery2 specifically (see below).
 
 Take heed of the following message from jQuery (retrieved 2014-03-26):
 
@@ -83,8 +82,31 @@ api.use('jquery2', 'client');
 	...
 	"packages": {
 		...
-		"jquery2": "2.1.0-1"
+		"jquery2": "2.1.0-2"
 	}
 }
 ```
 
+## Using
+
+As you'll see below, you now have access to `jQuery2` and `$2` in your code.
+You can also wrap existing code so that it can still refer to `jQuery` and `$`
+but get the jquery2 versions.
+
+```js
+	console.log('I want jQuery 1.x and got jQuery ' + $.fn.jquery);
+	console.log('I want jQuery 2.x and got jQuery ' + $2.fn.jquery);
+
+    (function(jQuery, $) {
+    	// `jQuery` and `$` in the code below will get the jquery2 version
+		console.log('I want jQuery 2.x and got jQuery ' + $.fn.jquery);
+    }).call(this, jQuery2, $2);
+```
+
+Output:
+
+```
+I want jQuery 1.x and got jQuery 1.11.0
+I want jQuery 2.x and got jQuery 2.1.0
+I want jQuery 2.x and got jQuery 2.1.0 
+```
