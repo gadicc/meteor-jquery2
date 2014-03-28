@@ -1,3 +1,5 @@
+## Apologies, I really didn't think this through.  Don't use this package.  #eternalshame
+
 ## jQuery 2.x for Meteor
 
 This package includes jQuery 2.x, packaged for Meteor.
