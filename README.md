@@ -82,7 +82,7 @@ api.use('jquery2', 'client');
 	...
 	"packages": {
 		...
-		"jquery2": "2.1.0-2"
+		"jquery2": "2.1.0-3"
 	}
 }
 ```
