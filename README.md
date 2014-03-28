@@ -98,7 +98,7 @@ but gets the jquery2 versions.
 	console.log('I want jQuery 2.x and got jQuery ' + $2.fn.jquery);
 
     (function(jQuery, $) {
-    	// `jQuery` and `$` in the code below will get the jquery2 version
+    	// `jQuery` and `$` in the code below is the jquery2 version
 		console.log('I want jQuery 2.x and got jQuery ' + $.fn.jquery);
     }).call(this, jQuery2, $2);
 ```
