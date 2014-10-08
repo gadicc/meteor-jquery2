@@ -1,9 +1,0 @@
-{
-    "name": "jquery2",
-    "description": "jQuery 2.x (2.1.0) that co-exists with jquery package (v1)",
-    "homepage": "https://github.com/gadicc/meteor-jquery2",
-    "author": "Gadi Cohen <dragon@wastelands.net>",
-    "version": "2.1.0-3",
-    "git": "https://github.com/gadicc/meteor-jquery2.git",
-	"packages": {}
-}
